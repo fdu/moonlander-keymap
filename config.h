@@ -1,4 +1,4 @@
 #pragma once
 
 #define ORYX_CONFIGURATOR
-//#define RGBLIGHT_LAYERS
+#define CONFIG_ENABLE_RGB_MATRIX
