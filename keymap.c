@@ -3,6 +3,7 @@
 
 #include "ledmaps.h"
 #include "keymaps.h"
+#include "songs.h"
 
 void keyboard_post_init_user(void) {
 #ifdef CONFIG_ENABLE_RGB_MATRIX
@@ -69,6 +70,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
       case SMILEY:
         SEND_STRING (":-)");
+        return false;
+      case SONG_1:
+        PLAY_SONG(song1);
         return false;
     }
   }
