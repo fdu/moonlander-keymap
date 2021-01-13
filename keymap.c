@@ -71,9 +71,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       case SMILEY:
         SEND_STRING (":-)");
         return false;
-      case SONG_1:
-        PLAY_SONG(song1);
-        return false;
+#ifdef CONFIG_ENABLE_SONGS
+      case SONG_1: PLAY_SONG(song1); return false;
+      case SONG_2: PLAY_SONG(song2); return false;
+      case SONG_3: PLAY_SONG(song3); return false;
+      case SONG_4: PLAY_SONG(song4); return false;
+      case SONG_5: PLAY_SONG(song5); return false;
+      case SONG_6: PLAY_SONG(song6); return false;
+      case SONG_7: PLAY_SONG(song7); return false;
+      case SONG_8: PLAY_SONG(song8); return false;
+      case SONG_9: PLAY_SONG(song9); return false;
+#endif
     }
   }
   return true;

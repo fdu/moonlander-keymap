@@ -23,7 +23,7 @@ enum ledmap_layers {
 const uint8_t PROGMEM ledmaps[][DRIVER_LED_TOTAL][3] = {
   [LEDMAP_KEY_PRINTS] = {
     // Column below key 0
-    {KEY_PRINTS_SYMBOL},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},
+    {KEY_PRINTS_ANON},		{KEY_PRINTS_SYMBOL},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},
     // Column below key 1
     {KEY_PRINTS_NUMBER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_ANON},
     // Column below key 2
