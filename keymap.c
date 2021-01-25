@@ -41,11 +41,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
   switch (layer) {
     case BASE:
-      ML_LED_1(1);
-      ML_LED_4(1);
-      rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
+      rgb_matrix_mode_noeeprom(RGB_MATRIX_SPLASH);
       break;
-    case SYMBOLS:
+    case QTY:
       ML_LED_2(1);
       ML_LED_5(1);
       rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
@@ -53,10 +51,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case FUN:
       ML_LED_3(1);
       ML_LED_6(1);
-//      rgb_matrix_mode_noeeprom(RGB_MATRIX_RAINDROPS);
       rgb_matrix_mode_noeeprom(RGB_MATRIX_RAINBOW_MOVING_CHEVRON);
       break;
-    case COLORS:
+    case CLR:
       ML_LED_1(1);
       ML_LED_2(1);
       ML_LED_3(1);
@@ -105,12 +102,12 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 # endif
   if (g_suspend_state || !rgb_matrix_config.enable) return;
 
-  if (layer_state_is(BASE)) {
+  if (layer_state_is(QTY)) {
     set_layer_color(LEDMAP_KEY_PRINTS);
-  } else if (layer_state_is(SYMBOLS)) {
-    set_layer_color(LEDMAP_SYMBOLS);
-  } else if (layer_state_is(COLORS)) {
-    set_layer_color(LEDMAP_COLORS);
+//  } else if (layer_state_is(FUN)) {
+//    set_layer_color(LEDMAP_FUN);
+  } else if (layer_state_is(CLR)) {
+    set_layer_color(LEDMAP_CLR);
   }
 }
 #endif

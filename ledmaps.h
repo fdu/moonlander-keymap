@@ -17,8 +17,8 @@
 
 enum ledmap_layers {
   LEDMAP_KEY_PRINTS,
-  LEDMAP_SYMBOLS,
-  LEDMAP_COLORS,
+//  LEDMAP_FUN,
+  LEDMAP_CLR,
 };
 
 /*
@@ -27,9 +27,9 @@ enum ledmap_layers {
 const uint8_t PROGMEM ledmaps[][DRIVER_LED_TOTAL][3] = {
   [LEDMAP_KEY_PRINTS] = {
     // Column below key 0
-    {KEY_PRINTS_ANON},		{KEY_PRINTS_SYMBOL},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},
+    {KEY_PRINTS_ANON},		{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},
     // Column below key 1
-    {KEY_PRINTS_NUMBER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_ANON},
+    {KEY_PRINTS_NUMBER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_SYMBOL},
     // Column below key 2
     {KEY_PRINTS_NUMBER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_LETTER},	{KEY_PRINTS_ANON},
     // Column below key 3
@@ -59,7 +59,8 @@ const uint8_t PROGMEM ledmaps[][DRIVER_LED_TOTAL][3] = {
     // Right thumb: right, middle, left, red
     {KEY_PRINTS_ANON},		{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},	{KEY_PRINTS_ANON},
   },
-  [LEDMAP_SYMBOLS] = {
+/*
+  [LEDMAP_FUN] = {
     // Column below key 0
     {SYMBOL_NOUSE},		{SYMBOL_NOUSE},		{SYMBOL_USE},		{SYMBOL_NOUSE},		{SYMBOL_NOUSE},
     // Column below key 1
@@ -93,7 +94,8 @@ const uint8_t PROGMEM ledmaps[][DRIVER_LED_TOTAL][3] = {
     // Right thumb: right, middle, left, red
     {SYMBOL_NOUSE},		{SYMBOL_NOUSE},		{SYMBOL_NOUSE},		{SYMBOL_NOUSE},
   },
-  [LEDMAP_COLORS] = {
+*/
+  [LEDMAP_CLR] = {
     // Column below key 0
     {HSV_WHITE},		{HSV_BLUE},		{COLOR_DEFAULT},	{COLOR_DEFAULT},	{COLOR_DEFAULT},
     // Column below key 1
