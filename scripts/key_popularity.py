@@ -18,4 +18,4 @@ for filename in glob.glob("record_*.log"):
   file.close()
 sortedHits = sorted(hits.items(), key=lambda x: x[1])
 for hit in sortedHits:
-  print("%s\t%s" % (hit[0], hit[1]))
+  print("%s\t%s" % (hit[1], hit[0]))
